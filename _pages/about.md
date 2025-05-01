@@ -7,7 +7,7 @@ subtitle: <span title="International Phonetic Alphabet">[daˈɲɛ.lɛ ˈɡran.di
 
 profile:
   align: right
-  image: danielegrandi_profile.jpg
+  image: danielegrandi_profile2.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>South Lake Tahoe, CA, 96150</p>
