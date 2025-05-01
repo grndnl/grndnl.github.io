@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://www.research.autodesk.com/'>Autodesk Research</a>. Data-driven design and Machine Learning.
+subtitle: <span title="International Phonetic Alphabet">[daˈɲɛ.lɛ ˈɡran.di]</span> <em>(Dani)</em> <br> <a href='https://www.research.autodesk.com/'>Autodesk Research</a>. Data-driven design and Machine Learning.
 
 
 profile:
