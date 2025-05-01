@@ -1,9 +1,23 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+LLM:
+  color: "#E91E63"  # Magenta
+  url: https://en.wikipedia.org/wiki/Large_language_model
 
-"PhysRev":
-  url: https://journals.aps.org/
+Graph Neural Network:
+  color: "#5C6BC0"  # Indigo / Blue
+  url: https://en.wikipedia.org/wiki/Graph_neural_network
 
-"Vision":
-  color: "#009f36"
+Patent:
+  color: "#606060"  # Dark Gray
+  url: https://www.uspto.gov/
+
+Knowledge Graph:
+  color: "#2ECC71"  # Green
+  url: https://en.wikipedia.org/wiki/Knowledge_graph
+
+Machine Learning:
+  color: "#F1C40F"  # Yellow
+  url: https://en.wikipedia.org/wiki/Machine_learning
+
+Dataset:
+  color: "#3498DB"  # Sky Blue
+  url: https://en.wikipedia.org/wiki/Data_set
