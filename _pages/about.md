@@ -15,15 +15,6 @@ profile:
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 
-announcements:
-  enabled: false # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
-
-latest_posts:
-  enabled: false
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
 ---
 
 As a Principal Research Scientist at Autodesk Research, I'm working to further the machine understanding of mechanical design problems. I'm interested in leveraging knowledge representation and reasoning, ontologies, knowledge graphs, and semantic technologies to create the next generation of design tools. In collaboration with UC Berkeley, CMU, Oregon State University, and MIT, we are researching methods to learn design best practices from CAD databases. 
