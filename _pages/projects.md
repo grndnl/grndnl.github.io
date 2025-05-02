@@ -2,10 +2,10 @@
 layout: page
 title: projects
 permalink: /projects/
-description: WORK IN PROGRESS
+description: A selection of projects. For the latest work see publications.
 nav: true
 nav_order: 3
-display_categories: [work, fun]
+display_categories: 
 horizontal: false
 ---
 
