@@ -18,7 +18,7 @@ ninja.data = [{
           },
         },{id: "nav-projects",
           title: "projects",
-          description: "WORK IN PROGRESS",
+          description: "A selection of projects. For the latest work see publications.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
@@ -37,11 +37,56 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
+        },{id: "projects-f1-suspension",
+          title: 'F1 Suspension',
+          description: "Generative design of F1 suspension.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/1_project.html";
+              window.location.href = "/projects/F1-wishbone.html";
+            },},{id: "projects-modular-chair",
+          title: 'Modular chaiR',
+          description: "Modular chair design for synthetic data generation and fabrication.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/chair.html";
+            },},{id: "projects-clean-data-is-all-you-need",
+          title: '📄Clean data is all you need',
+          description: "Process PDFs of scientific papers into structured data.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/clean-data-is-all-you-need.html";
+            },},{id: "projects-ai-assisted-knowledge-graph-design",
+          title: 'AI-assisted Knowledge Graph Design',
+          description: "Research collaboration with CSUN, NIST, and NASA JPL to implement a recommendation system for materials of part in assemblies.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/csun.html";
+            },},{id: "projects-dreamcatcher",
+          title: 'Dreamcatcher',
+          description: "Generative design research prototype, democratizing topology optimization.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/dreamcatcher.html";
+            },},{id: "projects-olsryd-9-cylinder-radial-engine",
+          title: 'Olsryd 9 Cylinder Radial Engine',
+          description: "Design of complete assembly of an airplane engine composed of more 1600 parts.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/engine.html";
+            },},{id: "projects-hackrod",
+          title: 'Hackrod',
+          description: "Generatively design manufacturable car chassis.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/hackrod.html";
+            },},{id: "projects-concept-interplanetary-lander",
+          title: 'Concept Interplanetary Lander',
+          description: "Research collaboration with NASA JPL leveraging generative design for space exploration.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/lander.html";
+            },},{id: "projects-6-dof-object-pose-estimation",
+          title: '6 DoF object pose estimation',
+          description: "Edge implementatinon of estimation from monocular 2D images.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/object-pose-estimation.html";
+            },},{id: "projects-generative-quadcopter",
+          title: 'Generative Quadcopter',
+          description: "Quadcopter chassis designed using generative design research prototype software.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/quadcopter.html";
             },},{
         id: 'social-email',
         title: 'email',
