@@ -44,7 +44,7 @@ ninja.data = [{
               window.location.href = "/projects/F1-wishbone.html";
             },},{id: "projects-generative-ai-for-assembly-design",
           title: 'Generative AI for Assembly Design',
-          description: "Generative AI design tools that can be used to design things from coffee makers to cars.",
+          description: "How can Generative AI design tools be used to design assemblies, from coffee makers to EVs?",
           section: "Projects",handler: () => {
               window.location.href = "/projects/assembly-graph.html";
             },},{id: "projects-modular-chair",
