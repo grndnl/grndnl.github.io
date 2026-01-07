@@ -42,6 +42,11 @@ ninja.data = [{
           description: "Generative design of F1 suspension.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/F1-wishbone.html";
+            },},{id: "projects-generative-ai-for-assembly-design",
+          title: 'Generative AI for Assembly Design',
+          description: "Generative AI design tools that can be used to design things from coffee makers to cars.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/assembly-graph.html";
             },},{id: "projects-modular-chair",
           title: 'Modular chaiR',
           description: "Modular chair design for synthetic data generation and fabrication.",
