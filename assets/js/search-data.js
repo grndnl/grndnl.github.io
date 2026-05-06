@@ -121,6 +121,13 @@ ninja.data = [{
           window.open("https://www.research.autodesk.com/people/daniele-grandi/", "_blank");
         },
       },{
+        id: 'social-agents_md_url',
+        title: 'Agents_md_url',
+        section: 'Socials',
+        handler: () => {
+          window.open("", "_blank");
+        },
+      },{
       id: 'light-theme',
       title: 'Change theme to light',
       description: 'Change the theme of the site to Light',
