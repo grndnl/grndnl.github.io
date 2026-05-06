@@ -187,20 +187,24 @@ module AgentsMd
       body = about_body.strip
       return nil if body.empty?
 
-      paragraphs = body.split(/\n{2,}/).reject { |p| p.strip.empty? }
+      paragraphs = body.split(/\n{2,}/).map(&:strip).reject(&:empty?)
       # Skip paragraphs that look like raw HTML or Liquid blocks (e.g. CTAs
       # injected for the website rendering layer).
       narrative = paragraphs.reject do |p|
-        s = p.strip
-        s.start_with?("<") || s.start_with?("{%") || s.start_with?("{{")
+        p.start_with?("<") || p.start_with?("{%") || p.start_with?("{{")
       end
       return nil if narrative.empty?
 
-      lines = ["## About", ""]
-      lines << "_The narrative below is in #{first_name}'s own first-person voice, copied verbatim from the website's about page._"
-      lines << ""
-      lines.concat(narrative)
-      lines.join("\n")
+      header = [
+        "## About",
+        "",
+        "_The narrative below is in #{first_name}'s own first-person voice, copied verbatim from the website's about page._",
+        ""
+      ].join("\n")
+
+      # Use blank lines between paragraphs so they render as separate
+      # paragraphs in Markdown regardless of the source file's line endings.
+      header + "\n" + narrative.join("\n\n")
     end
 
     def education_section
@@ -551,22 +555,32 @@ module AgentsMd
 
     # Read just the YAML front matter from a Markdown file.
     def load_front_matter(path)
-      raw = File.read(path)
-      return nil unless raw.start_with?("---")
+      raw = read_normalized(path)
+      return nil unless raw && raw.start_with?("---")
       _, fm, _body = raw.split(/^---\s*$/, 3)
       YAML.safe_load(fm.to_s, permitted_classes: [Date, Time], aliases: true) || {}
-    rescue Errno::ENOENT, Psych::SyntaxError
+    rescue Psych::SyntaxError
       nil
     end
 
     # Read just the body (after front matter) of a Markdown file.
     def load_body(path)
-      raw = File.read(path)
+      raw = read_normalized(path)
+      return nil unless raw
       if raw.start_with?("---")
         _, _fm, body = raw.split(/^---\s*$/, 3)
         return body.to_s.strip
       end
       raw.strip
+    end
+
+    # Read a text file and normalize line endings to LF. Without this,
+    # Windows-edited sources (CRLF) produce subtly different paragraph
+    # splitting than the same files on Linux runners (LF), which causes
+    # the auto-generated AGENTS.md to differ between platforms and the
+    # sync workflow to make spurious "no-op" commits.
+    def read_normalized(path)
+      File.binread(path).force_encoding("UTF-8").gsub("\r\n", "\n")
     rescue Errno::ENOENT
       nil
     end
