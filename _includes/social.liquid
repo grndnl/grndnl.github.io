@@ -86,6 +86,8 @@
       <a href="https://wikipedia.org/wiki/User:{{ social[1] }}" title="Wikipedia"><i class="fa-brands fa-wikipedia-w"></i></a>
     {% when 'work_url' %}
       <a href="{{ social[1] }}" title="Work"><i class="fa-solid fa-briefcase"></i></a>
+    {% when 'agents_md_url' %}
+      <a href="{{ social[1] | relative_url }}" title="Ask an LLM about me (download Markdown profile)" download="daniele-grandi-AGENTS.md"><i class="fa-solid fa-robot"></i></a>
     {% when 'x_username' %}
       <a href="https://twitter.com/{{ social[1] }}" title="X"><i class="fa-brands fa-x-twitter"></i></a>
     {% when 'youtube_id' %}

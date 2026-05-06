@@ -126,6 +126,9 @@ exclude:
   - docker-compose.yml
   - docker-compose-slim.yml
   - FAQ.md
+  # AGENTS.md is intentionally NOT excluded: a small Jekyll plugin
+  # (_plugins/copy-agents-md.rb) copies the repo-root AGENTS.md into the
+  # generated site so it can be downloaded from /AGENTS.md.
   - Gemfile
   - Gemfile.lock
   - INSTALL.md
@@ -196,6 +199,8 @@ scholar:
   details_link: Details
 
   query: "@*"
+  sort_by: year
+  order: descending
   group_by: year
   group_order: descending
 

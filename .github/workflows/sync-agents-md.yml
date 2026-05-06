@@ -1,0 +1,76 @@
+name: Sync AGENTS.md
+
+# Regenerates the repo-root AGENTS.md from data sources (about page, resume,
+# projects, bibliography, repositories, socials) and commits the change if
+# anything is out of date.
+#
+# Why this exists:
+#   - _plugins/copy-agents-md.rb already generates AGENTS.md into _site/ at
+#     Jekyll build time, so the *live website* always serves a fresh copy.
+#   - This workflow keeps the *repo-root* AGENTS.md in sync so that AI agents
+#     (Cursor, Copilot, etc.) reading the repository directly also see an
+#     up-to-date file without anyone having to remember to run the script.
+
+on:
+  push:
+    branches:
+      - master
+      - main
+    paths:
+      - "_pages/about.md"
+      - "assets/json/resume.json"
+      - "_projects/**"
+      - "_bibliography/**"
+      - "_data/repositories.yml"
+      - "_data/socials.yml"
+      - "_plugins/agents_md_builder.rb"
+      - "scripts/build_agents_md.rb"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Cancel in-flight runs on the same branch so the latest push wins.
+concurrency:
+  group: sync-agents-md-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    # Skip if the previous commit was made by this workflow, to avoid loops.
+    if: ${{ !contains(github.event.head_commit.message, '[skip agents-md]') }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # Need a real token (not GITHUB_TOKEN's default) so the resulting
+          # commit can re-trigger downstream workflows like deploy.yml. Using
+          # the default token here is fine for committing back, but downstream
+          # workflows won't be retriggered. That's acceptable because deploy.yml
+          # also lists "**/*.md" in its trigger paths and will already be
+          # building from the same push when source files change.
+          fetch-depth: 1
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3.5"
+          bundler-cache: true
+
+      - name: Regenerate AGENTS.md
+        run: bundle exec ruby scripts/build_agents_md.rb
+
+      - name: Commit if changed
+        run: |
+          git add AGENTS.md
+          # Use --cached to compare staged AGENTS.md against the last commit,
+          # which correctly detects both modified and brand-new files.
+          if git diff --cached --quiet -- AGENTS.md; then
+            echo "AGENTS.md is already up to date."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: sync AGENTS.md from data sources [skip agents-md]"
+          git push

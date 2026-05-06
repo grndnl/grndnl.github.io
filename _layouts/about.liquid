@@ -35,6 +35,21 @@ layout: default
         {% if page.profile.more_info %}
           <div class="more-info">{{ page.profile.more_info }}</div>
         {% endif %}
+
+        <!-- Ask an LLM about me (downloads a single-file Markdown profile) -->
+        {% if page.agents_md and page.agents_md.enabled %}
+          <div class="agents-md-cta mt-3 text-center">
+            <a
+              href="{{ '/AGENTS.md' | relative_url }}"
+              class="agents-md-btn"
+              role="button"
+              download="daniele-grandi-AGENTS.md"
+              title="Download a single-file Markdown summary of this site to feed into ChatGPT, Claude, or any LLM"
+            >
+              <i class="fa-solid fa-robot"></i>&nbsp;Ask an LLM about me
+            </a>
+          </div>
+        {% endif %}
       </div>
     {% endif %}
 

@@ -1,2 +1,6 @@
 # Force LF line endings, needed for Docker to work on Windows
 *.sh text eol=lf
+# Ruby scripts often have shebangs and run inside the Linux Jekyll container.
+# CRLF line endings cause "shebang line ending with \r" warnings and can
+# break execution, so force LF here too.
+*.rb text eol=lf

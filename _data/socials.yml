@@ -42,6 +42,7 @@ scholar_userid: X0qp478AAAAJ&hl # your Google Scholar ID
 # wikidata_id: # your wikidata id
 # wikipedia_id: # your wikipedia id (Case sensitive)
 work_url: https://www.research.autodesk.com/people/daniele-grandi/ # work page URL
+agents_md_url: /AGENTS.md # robot icon linking to a Markdown profile for LLMs
 # x_username: # your X handle
 # youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 # zotero_username: # your zotero username

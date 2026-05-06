@@ -227,6 +227,39 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+// "Ask an LLM about me" CTA shown under the profile photo. Uses the site's
+// theme accent color so it reads as the only true call-to-action on the page.
+.agents-md-cta {
+  .agents-md-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.85rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--global-theme-color);
+    background-color: transparent;
+    border: 1px solid var(--global-theme-color);
+    border-radius: 999px;
+    text-decoration: none;
+    transition:
+      background-color 0.15s ease-in-out,
+      color 0.15s ease-in-out;
+
+    &:hover,
+    &:focus {
+      color: var(--global-bg-color);
+      background-color: var(--global-theme-color);
+      text-decoration: none;
+    }
+
+    i {
+      font-size: 0.95em;
+    }
+  }
+}
+
 .post-description {
   margin-bottom: 2rem;
   font-size: 0.875rem;

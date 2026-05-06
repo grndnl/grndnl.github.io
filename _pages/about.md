@@ -15,6 +15,11 @@ profile:
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 
+agents_md:
+  enabled: true # shows the "Download profile (Markdown)" CTA below the bio
+
+
+
 ---
 
 As a Principal Research Scientist at Autodesk Research, I'm working to further the machine understanding of mechanical design problems. I'm interested in leveraging machine learning, knowledge representation and reasoning, LLMs, knowledge graphs, and agentic AI to create the next generation of conceptual and detail design tools. In collaboration with UC Berkeley, CMU, Oregon State University, and MIT, we are researching methods to learn design best practices from CAD datasets, and releasing ML benchmarks to expose model biases in design tasks and foster industry and academic innovation. 
