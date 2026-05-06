@@ -28,13 +28,9 @@
 _The narrative below is in Daniele's own first-person voice, copied verbatim from the website's about page._
 
 As a Principal Research Scientist at Autodesk Research, I'm working to further the machine understanding of mechanical design problems. I'm interested in leveraging machine learning, knowledge representation and reasoning, LLMs, knowledge graphs, and agentic AI to create the next generation of conceptual and detail design tools. In collaboration with UC Berkeley, CMU, Oregon State University, and MIT, we are researching methods to learn design best practices from CAD datasets, and releasing ML benchmarks to expose model biases in design tasks and foster industry and academic innovation. 
-
 At Autodesk, I've also worked as a Design Engineer on generative design research prototypes. Previously, I worked as an engineering consultant for a metal AM startup, focusing on design, simulation, and optimization of assemblies for AM. 
-
 I graduated from UC Berkeley with a Mechanical Engineering degree.  I started working with 3D printers at Berkeley, where I founded the 3D Modeling Club. While additive manufacturing had been my main field of focus, I also enjoyed traditional manufacturing methods, applied to mechatronics projects.  I enjoy getting my hands on all parts of a project, whether it involves design, coding, circuits, or fabrication.
-
 The first 3D printing startup that I joined was eucl3D, a Berkeley startup working with game developers to provide custom high-quality 3D printed collectibles.
-
 Through Project BAM, the second 3D printing startup I worked at, I learned more about metal additive manufacturing and became interested in design optimization.
 
 ## Education
