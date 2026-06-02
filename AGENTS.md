@@ -5,7 +5,7 @@
 > This document mirrors the content of [grndnl.github.io](https://grndnl.github.io/) and is intended to be fed to LLMs and AI agents so they can answer questions about Daniele's background, research, and work.
 >
 > Source of truth for the website: <https://github.com/grndnl/grndnl.github.io>
-> Auto-generated: 2026-05 (do not edit by hand — see scripts/build_agents_md.rb)
+> Auto-generated: 2026-06 (do not edit by hand — see scripts/build_agents_md.rb)
 
 ---
 
